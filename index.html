@@ -14,7 +14,7 @@
 <!--  Navbar -->
 
     <div class="topnav">
-        <a class="active" href="#welcome">
+        <a class="active" href="#top">
             <div class="imgBx">
                 <img class="box-image-home" src="images/GogGalaxy Logo.png">
             </div>
@@ -24,8 +24,8 @@
                 <a href="#about">About</a>
                 <a href="#highlights">Highlights</a>
                 <a href="#games">Games</a>
-                <a href="#videos">Videos</a>
                 <a href="#news">News</a>
+                <a href="#goodies">Goodies</a>
                 <a class="active" href="#top">
                     <div class="imgBx">
                         <img class="box-image-search" src="images/Shopping Cart.png">
@@ -40,13 +40,16 @@
     </div>
 </head>
 <body>
+    <div id="welcome"></div>
     <video width="100%" controls autoplay muted loop>
         <source src="images/GOG Website Intro Vid.mp4" type="video/mp4">
     </video>
 
-    <a class="about" href="#about">
-        <h1>About Us</h1>
-    </a>
+    <div id="about"></div>
+    
+    <br>
+
+    <h1>About Us</h1>
 
 <div class="container">
     <img class="about-image" src="images/cyberpunk_2077_ultimate_edition.png">
@@ -54,24 +57,88 @@
         and preserving older titles to be playable on modern hardware. Besides our website, 
         we are also know for creating the Witcher and Cyberpunk video game series. You can 
         view our games as well as several other available titles from exceptional AAAs, unique 
-        indies and the best of classic gaming.  Game Store 
+        indies and the best of classic gaming. <a class="active" href="#highlights"><u>Game Store</u></a>
     </p>
     <img class="about-image-2" src="images/GOG Galaxy.jpg">
     <p>GOG Galaxy is our optional client to install and update games from our store. 
         This includes features like cloud saves, update roll-backs, achievements, and is a 
         convenient way to manage your cross-platform library while staying in touch with friends. 
         Download our latest version from the following hyperlink: 
-        GOG Galaxy Download
+        <a class="active" href="GOG Galaxy"><u>GOG Galaxy Download</u></a>
     </p>
+</div>
+
+<br>
+<div id="highlights"></div>
+    <h1>Highlights</h1>
+
+<!-- Carousel -->
+<div class="container">
+    <img class="mySlides" src="images/Stardew Valley Cover.jpg">
+
+    <div class="slide-row">
+        <div class="w3-col s1">
+            <img class="row-image" src="Images/Stardew Valley Cover.jpg" onclick="currentDiv(1)">
+        </div>
+        <div class="w3-col s1">
+            <img class="row-image" src="Images/Rayman Origins_2.jpg" onclick="currentDiv(2)">
+        </div>
+        <div class="w3-col s1">
+            <img class="row-image" src="Images/RollerCoasterTycoon.jpg" onclick="currentDiv(3)">
+        </div>
+        <div>
+            <img class="row-image" src="Images/cyberpunk_2077_ultimate_edition.png" onclick="currentDiv(4)">
+        </div>
+        <div>
+            <img class="row-image" src="Images/BG3 Cover.jpg" onclick="currentDiv(5)">
+        </div>
+        <div>
+            <img class="row-image" src="Images/HollowKnight Cover.jpg" onclick="currentDiv(6)">
+        </div>
+    </div>
+
+    <div class="scroll-container">
+            <h2>Why GOG?</h2>
+            
+            <p>We make games last forever!</p>
+            
+            <p>What makes our products unique from 
+            those on other digital game stores is that 
+            they are all DRM free. When you buy through 
+            our store, you have the option to launch 
+            your games through our GOG Galaxy app or 
+            from the game executable from your desktop.</p>
+
+            <p>Scroll through our latest and most featured 
+            titles. Whether you are looking for something 
+            new or rediscovering an old favorite, we have you covered.</p>
+
+            <p>Last year has seen a number of award winning titles 
+            such as Larian Studios’ Baldur’s Gate 3. We have received 
+            a number of new and classic titles never before released.</p>
+    </div>
 
 </div>
 
 
+    
+    <br>
+<div id="games"></div>
+    <h1>Games</h1>
 
+    <br>
+<div id="news"></div>
+    <h1>News</h1>
+
+    <br>
+<div id="goodies"></div>
+    <h1>Goodies</h1> 
 
 </body>
 
 <footer>
-
+        
 </footer>
+
+</div>
 </html>
