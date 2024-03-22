@@ -1,6 +1,7 @@
 body {
   margin:0;
   background-color: black;
+  font-family: "Montserrat";
 }
 
 p {
@@ -134,6 +135,7 @@ h2 {
 
 img {
   vertical-align: middle;
+  object-fit: cover;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -144,67 +146,139 @@ img {
   margin: auto;
 }
 
-.slider_box{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 75vh;
+.mySlides {
+  display: none;
+  
 }
 
-.container_slider{
-  width: 900px;
-  height: 500px;
-  display: block;
-  align-items: center;
-  
-  overflow: hidden;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
+  margin: auto;
+  display: block;
 }
 
-.slider{
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  user-select: none;
 }
 
-.slide{
-  flex: 0 0 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
+/* Position the "prev button" to the left */
+.prev {
+  left: -60px;
 }
 
-.slide.active{
-  transform: translateX(0);
+/* Position the "next button" to the right */
+.next {
+  right: -60px;
 }
 
-.slide img{
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+}
+
+/* Caption text */
+.left-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 72px 92px;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
-  height: 100%;
+  float: left;
+  z-index: 1;
 }
 
-.slider_controls button{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+.right-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 72px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  float: right;
+  z-index: 1;
+}
+
+.block {
+  background-image: linear-gradient(#ffffff, #000000);
+  padding: 72px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  opacity: 20%;
+  z-index: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  padding: 20px;
+}
+
+.left-column {
+  float: left;
+  width: 16.66%;
   
 }
 
-.slider_controls button:hover{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background: white;
-  color: black;
+.right-column {
+  float: right;
+  width: 16.66%;
+  
 }
 
-.prev, 
-.next{
-  margin: 0;
-  background: black;
-  color: white;
-  font-size: 80px;
-  border: 6px solid white;
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 
 
