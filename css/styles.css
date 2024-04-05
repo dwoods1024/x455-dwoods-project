@@ -1,6 +1,8 @@
 body {
   margin:0;
   background-color: black;
+  font-family: "Montserrat";
+  
 }
 
 p {
@@ -8,7 +10,18 @@ p {
   font-family: "Montserrat";
   color: white;
   text-align: left;
-  padding: 47px 0px;
+  padding: 20px 30px;
+}
+
+.highlight {
+  border: 15px solid #240071; /* Example: red colored border */
+  background-color: #240071;
+}
+
+u {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #E963FF;
 }
 
 h1 {
@@ -71,45 +84,272 @@ h2 {
   color: white;
 }
   
-  .topnav-right {
-    font-family: "Montserrat";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.topnav-right {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav-right a:hover {
+  background-color: #E963FF;
+  color: #240071;
+}
+
+
+
+.about-image {
+  height: 180px;
+  width: auto;
+  float: left;
+  padding: 0px 0px;
+  margin: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.about-image-2 {
+  height: 180px;
+  width: auto;
+  float: right;
+  border: 0px;
+  padding: 0px 0px;
+  margin: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  max-width: 950px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.video-container {
+  margin-top: 100px;
+}
+
+.my-video {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mySlides {
+  display: none;
   
-  .video {
-    height: 50px;
-  }
+}
 
-  .about-image {
-    height: 200px;
-    width: auto;
-    float: left;
-    border: 50px;
-  }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: block;
+}
 
-  .about-image-2 {
-    height: 200px;
-    width: auto;
-    float: right;
-    border: 50px;
-  }
 
-  .container {
-    padding: 0px 525px;
-    
-  }
+/* Position the "prev button" to the left */
+.prev {
+  left: -100px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  padding-top: 0;
+  margin-top: -20px;
+  color: white;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 80px;
+  height: 100px;
+  width: 100px;
+  transition: 0.2s ease;
+  user-select: none;
+}
 
+/* Position the "next button" to the right */
+.next {
+  right: -100px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 25px;
+  padding-top: 0;
+  margin-top: -20px;
+  color: white;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 80px;
+  height: 100px;
+  width: 100px;
+  transition: 0.2s ease;
+  user-select: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+}
+
+/* Caption text */
+.left-text {
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 50px 92px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  float: left;
+  z-index: 1;
+}
+
+.right-text {
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 50px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: calc(100% - 24px);
+  right: -670px;
+  z-index: 1;
+}
+
+.block {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
+  padding: 72px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  opacity: 100%;
+  z-index: 0;
+}
+
+.block-row {
+  max-width: 1000px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  padding: 20px;
+}
+
+.left-column {
+  float: left;
+  width: 16.66%;
   
+}
 
-  * {
-    box-sizing: border-box;
-  }
+.right-column {
+  float: right;
+  width: 16.66%;
   
-  footer {
-    background-color: #1E1E1E;
-    height: 500px;
-    width: auto;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.scroll-container{
+  max-width: 500px;
+  max-height: 500px;
+  aspect-ratio: 1/1;
+  overflow-y: scroll;
+  position: relative;
+  display: block;
+  scroll-snap-type: both mandatory;
+  scroll-snap-align: end;
+  margin: 30px auto;
+  background-color: #282828;
+}
+
+table {
+  font-family: "Montserrat";
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #240071;
+  text-align: center;
+  padding: 16px;
+}
+
+td {
+  
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(odd) {
+  fill: rgba(199, 199, 199, 0.20);
+}
+
+tr:nth-child(even) {
+  background-color: #565454;
+}
+
+footer {
+  background-color: #1E1E1E;
+  height: 500px;
    
-  }
+}
