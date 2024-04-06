@@ -2,6 +2,7 @@ body {
   margin:0;
   background-color: black;
   font-family: "Montserrat";
+  
 }
 
 p {
@@ -10,6 +11,11 @@ p {
   color: white;
   text-align: left;
   padding: 20px 30px;
+}
+
+.highlight {
+  border: 15px solid #240071; /* Example: red colored border */
+  background-color: #240071;
 }
 
 u {
@@ -90,9 +96,7 @@ h2 {
   color: #240071;
 }
 
-.video {
-  height: 50px;
-}
+
 
 .about-image {
   height: 180px;
@@ -100,7 +104,7 @@ h2 {
   float: left;
   padding: 0px 0px;
   margin: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
@@ -111,21 +115,8 @@ h2 {
   border: 0px;
   padding: 0px 0px;
   margin: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
-}
-
-.scroll-container{
-  max-width: 500px;
-  max-height: 500px;
-  aspect-ratio: 1/1;
-  overflow-y: scroll;
-  position: relative;
-  display: block;
-  scroll-snap-type: both mandatory;
-  scroll-snap-align: end;
-  margin: 30px auto;
-  background-color: #282828;
 }
 
 * {
@@ -143,6 +134,18 @@ img {
   position: relative;
   display: block;
   margin: auto;
+}
+
+.video-container {
+  margin-top: 100px;
+}
+
+.my-video {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .mySlides {
@@ -213,8 +216,9 @@ img {
 /* Caption text */
 .left-text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 72px 92px;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 50px 92px;
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -224,23 +228,28 @@ img {
 
 .right-text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 72px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 50px 12px;
   position: absolute;
   bottom: 0px;
-  width: 100%;
-  float: right;
+  width: calc(100% - 24px);
+  right: -670px;
   z-index: 1;
 }
 
 .block {
-  background-image: linear-gradient(#ffffff, #000000);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
   padding: 72px 12px;
   position: absolute;
   bottom: 0px;
   width: 100%;
-  opacity: 50%;
+  opacity: 100%;
   z-index: 0;
+}
+
+.block-row {
+  max-width: 1000px;
 }
 
 /* Fading animation */
@@ -299,10 +308,134 @@ img {
   opacity: 1;
 }
 
+.scroll-container{
+  max-width: 500px;
+  max-height: 500px;
+  aspect-ratio: 1/1;
+  overflow-y: scroll;
+  position: relative;
+  display: block;
+  scroll-snap-type: both mandatory;
+  scroll-snap-align: end;
+  margin: 30px auto;
+  background-color: #282828;
+}
 
+table {
+  font-family: "Montserrat";
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
 
- footer {
+th {
+  background-color: #240071;
+  text-align: center;
+  padding: 16px;
+}
+
+td {
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(96, 88, 88, 0.2);
+}
+
+tr:nth-child(even) {
+  background-color: #565454;
+}
+
+.td-img {
+  height: 90px;
+  width: 10px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+footer {
   background-color: #1E1E1E;
   height: 500px;
    
+}
+
+:root {
+  --primary: #240071;
+  --secondary: #ff5252;
+  --background: #eee;
+  --highlight: #ffda79;
+  /* Theme color */
+  --theme: var(--primary);
+}
+
+
+/* Core styles/functionality */
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  color: var(--theme);
+  border: 2px solid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: var(--theme);
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.accordion--radio {
+  --theme: var(--secondary);
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
 }

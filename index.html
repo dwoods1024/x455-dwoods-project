@@ -13,40 +13,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <!--  Navbar -->
-
-    <div class="topnav">
-        <a class="active" href="#top">
-            <div class="imgBx">
-                <img class="box-image-home" src="images/GogGalaxy Logo.png">
-            </div>
-        </a>
-            <div class="topnav-right">
-                <a href="#welcome">Welcome</a>
-                <a href="#about">About</a>
-                <a href="#highlights">Highlights</a>
-                <a href="#games">Games</a>
-                <a href="#news">News</a>
-                <a href="#goodies">Goodies</a>
-                <a class="active" href="#top">
-                    <div class="imgBx">
-                        <img class="box-image-search" src="images/Shopping Cart.png">
-                    </div>
-                </a>
-                <a class="active" href="#top">
-                    <div class="imgBx">
-                        <img class="box-image-search" src="images/Search.png">
-                    </div>
-                </a>
-            </div>        
-    </div>
 </head>
 <body>
-
+  <div class="topnav">
+    <a class="active" href="#top">
+        <div class="imgBx">
+            <img class="box-image-home" src="images/GogGalaxy Logo.png">
+        </div>
+    </a>
+        <div class="topnav-right">
+            <a href="#welcome">Welcome</a>
+            <a href="#about">About</a>
+            <a href="#highlights">Highlights</a>
+            <a href="#games">Games</a>
+            <a href="#news">News</a>
+            <a href="#goodies">Goodies</a>
+            <a class="active" href="#top">
+                <div class="imgBx">
+                    <img class="box-image-search" src="images/Shopping Cart.png">
+                </div>
+            </a>
+            <a class="active" href="#top">
+                <div class="imgBx">
+                    <img class="box-image-search" src="images/Search.png">
+                </div>
+            </a>
+        </div>        
+</div>
+  <div class="video-container">
     <div id="welcome"></div>
-    <video width="100%" controls autoplay muted loop>
+    <video class="my-video" controls autoplay muted loop>
         <source src="images/GOG Website Intro Vid.mp4" type="video/mp4">
     </video>
-
+  </div>
+  
     <div id="about"></div>
     
     <br>
@@ -80,78 +80,71 @@
 
     <div class="mySlides fade">
       <img src="Images/Ori&theBlindForestCover.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
+        
           <div class="left-text">Ori and the Blind Forest</div>
-        </div>
-        <div class="right-column">
+                
           <div class="right-text">$19.99</div>
-        </div>
+        
       </div>
       <div class="block"></div>
     </div>
     
     <div class="mySlides fade">
       <img src="Images/c2077+ult.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
+        
           <div class="left-text">Cyberpunk 2077</div>
-        </div>
-        <div class="right-column">
-          <div class="right-text">$19.99</div>
-        </div>
+                
+          <div class="right-text">$59.99</div>
+        
       </div>
       <div class="block"></div>
     </div>
     
     <div class="mySlides fade">
       <img src="Images/FactorioArtwork.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
+        
           <div class="left-text">Factorio</div>
-        </div>
-        <div class="right-column">
-          <div class="right-text">$19.99</div>
-        </div>
+        
+          <div class="right-text">$35.99</div>
+        
       </div> 
       <div class="block"></div>
     </div>
 
     <div class="mySlides fade">
       <img src="Images/Rayman Origins_2.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
+        
           <div class="left-text">Rayman Origins</div>
-        </div>
-        <div class="right-column">
-          <div class="right-text">$19.99</div>
-        </div>
+        
+          <div class="right-text" style="width: calc(100% - 24px); right: -510px"><span class="highlight">75% Off!</span> $3.99</div>
+       
       </div> 
       <div class="block"></div>
     </div>
 
     <div class="mySlides fade">
       <img src="Images/Stardew Valley Cover.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
+        
           <div class="left-text">Stardew Valley</div>
-        </div>
-        <div class="right-column">
+        
           <div class="right-text">$19.99</div>
-        </div>
+        
       </div> 
       <div class="block"></div>
     </div>
 
     <div class="mySlides fade">
       <img src="Images/Baldur's Gate 3.jpg" style="width:100%">
-      <div class="row">
-        <div class="left-column">
+      <div class="block-row">
           <div class="left-text">Baldur’s Gate 3</div>
-        </div>
-        <div class="right-column">
+        
           <div class="right-text">$59.99</div>
-        </div>
+        
       </div> 
       <div class="block"></div>
     </div>
@@ -160,59 +153,63 @@
     <a class="prev" onclick="plusSlides(-1)"><i class='fas fa-angle-left'></i></a>
     <a class="next" onclick="plusSlides(1)"><i class='fas fa-angle-right'></i></a>
     
-    </div>
+  </div>
     <br>
     
    
 
     <div class="row">
       <div class="column">
-        <img class="demo cursor" src="Images/Ori&theBlindForestCover.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        <img class="demo cursor" src="Images/Ori&theBlindForestCover.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ori">
       </div>
       <div class="column">
-        <img class="demo cursor" src="Images/c2077+ult.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        <img class="demo cursor" src="Images/c2077+ult.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cyberpunk">
       </div>
       <div class="column">
-        <img class="demo cursor" src="Images/FactorioArtwork.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        <img class="demo cursor" src="Images/FactorioArtwork.jpg" style="width:100%" onclick="currentSlide(3)" alt="Factorio">
       </div>
       <div class="column">
-        <img class="demo cursor" src="Images/Rayman Origins_2.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Woods">
+        <img class="demo cursor" src="Images/Rayman Origins_2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rayman">
       </div>
       <div class="column">
-        <img class="demo cursor" src="Images/Stardew Valley Cover.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cinque Terre">
+        <img class="demo cursor" src="Images/Stardew Valley Cover.jpg" style="width:100%" onclick="currentSlide(5)" alt="Stardew">
       </div>
       <div class="column">
-        <img class="demo cursor" src="Images/Baldur's Gate 3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mountains and fjords">
+        <img class="demo cursor" src="Images/Baldur's Gate 3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Baldur's Gate">
       </div>
     </div>
     
     <script>
     let slideIndex = 1;
+    let timeoutId; // Variable to store the timeout ID
+    
     showSlides(slideIndex);
     
     function plusSlides(n) {
+      clearTimeout(timeoutId); // Clear previous timeout
       showSlides(slideIndex += n);
     }
     
     function currentSlide(n) {
+      clearTimeout(timeoutId); // Clear previous timeout
       showSlides(slideIndex = n);
     }
     
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
       if (n > slides.length) {slideIndex = 1}    
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+      slides[slideIndex - 1].style.display = "block";
+      timeoutId = setTimeout(function () {
+        showSlides(slideIndex += 1);
+      }, 5000); // Change slide every 5 seconds
     }
+
+
     </script>
 
     <div class="scroll-container">
@@ -236,27 +233,90 @@
             a number of new and classic titles never before released.</p>
     </div>
 
-</div>
 
 
     
     <br>
-<div id="games"></div>
+  <div id="games"></div>
     <h1>Games</h1>
+    <table>
+      <tr>
+        <th>Cover</th>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>
+          <img class="td-img" src="Images/c2077+ult.jpg" style="width:70%" alt="Cyberpunk">
+        </td>
+        <td>Cyberpunk 2077 Ultimate Edition</td>
+        <td>Role-Playing</td>
+        <td>$59.99</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="td-img" src="Images/Stardew Valley Cover.jpg" style="width:70%" alt="Stardew">
+        </td>
+        <td>Stardew Valley</td>
+        <td>Role-Playing</td>
+        <td>$15.99</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="td-img" src="Images/HollowKnight Cover.jpg" style="width:70%" alt="HollowKnight">
+        </td>
+        <td>Hollow Knight</td>
+        <td>Metroidvania</td>
+        <td>$15.99</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="td-img" src="Images/FactorioArtwork.jpg" style="width:70%" alt="Factorio">
+        </td>
+        <td>Factorio</td>
+        <td>Automation</td>
+        <td>$35.99</td>
+      </tr>
+    </table>
+  
 
     <br>
-<div id="news"></div>
-    <h1>News</h1>
 
-    <br>
-<div id="goodies"></div>
-    <h1>Goodies</h1> 
+  <div id="news"></div>
+      <h1>News</h1>
+      <container>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-</body>
+        <section class="accordion">
+          <div class="tab">
+            <input type="checkbox" name="accordion-1" id="cb2">
+            <label for="cb2" class="tab__label">Open multiple</label>
+            <div class="tab__content">
+              <p>Using <code>&lt;input type="checkbox"&gt;</code> allows to have several tabs open at the same time.</p>
+            </div>
+          </div>
+        </section>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lmc-d9HRYpc?si=YVhdg7aNX3lsUmlm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </container>
+      <br>
+  <div id="goodies"></div>
+      <h1>Goodies</h1> 
+
+
+      
+  </body>
+</div>
 
 <footer>
+  <div class="container">
+
+  </div>
         
 </footer>
+  
 
-</div>
 </html>
