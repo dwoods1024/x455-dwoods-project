@@ -21,25 +21,34 @@
             <img class="box-image-home" src="images/GogGalaxy Logo.png">
         </div>
     </a>
-        <div class="topnav-right">
+        <div class="nav-group">
             <a href="#welcome">Welcome</a>
             <a href="#about">About</a>
             <a href="#highlights">Highlights</a>
             <a href="#games">Games</a>
             <a href="#news">News</a>
             <a href="#goodies">Goodies</a>
-            <a class="active" href="#top">
-                <div class="imgBx">
-                    <img class="box-image-search" src="images/Shopping Cart.png">
-                </div>
-            </a>
-            <a class="active" href="#top">
-                <div class="imgBx">
-                    <img class="box-image-search" src="images/Search.png">
-                </div>
-            </a>
+            <div class="menu-tray">
+              <a class="active" href="#top">
+                  <div class="imgBx">
+                      <img class="box-image-search" src="images/Shopping Cart.png">
+                  </div>
+              </a>
+              <a class="active" href="#top">
+                  <div class="imgBx">
+                      <img class="box-image-search" src="images/Search.png">
+                  </div>
+              </a>
+              <a class="active" href="#top">
+                <span class="menu-hamburger">
+                    <span class="menu-hamburger__line"></span>
+                    <span class="menu-hamburger__line"></span>
+                    <span class="menu-hamburger__line"></span>
+                </span>
+              </a>
+            </div>
         </div>        
-</div>
+  </div>
   <div class="video-container">
     <div id="welcome"></div>
     <video class="my-video" controls autoplay muted loop>
@@ -53,257 +62,349 @@
 
     <h1>About Us</h1>
 
-<div class="container">
-    <img class="about-image" src="images/cyberpunk_2077_ultimate_edition.png">
-    <p>Good Old Games, or GOG for short, is a video game website dedicated to selling 
-        and preserving older titles to be playable on modern hardware. Besides our website, 
-        we are also know for creating the Witcher and Cyberpunk video game series. You can 
-        view our games as well as several other available titles from exceptional AAAs, unique 
-        indies and the best of classic gaming. <a class="active" href="#highlights"><u>Game Store</u></a>
-    </p>
-    <img class="about-image-2" src="images/GOG Galaxy.jpg">
-    <p>GOG Galaxy is our optional client to install and update games from our store. 
-        This includes features like cloud saves, update roll-backs, achievements, and is a 
-        convenient way to manage your cross-platform library while staying in touch with friends. 
-        Download our latest version from the following hyperlink: 
-        <a class="active" href="GOG Galaxy"><u>GOG Galaxy Download</u></a>
-    </p>
-</div>
-
-<br>
-<div id="highlights"></div>
-    <h1>Highlights</h1>
-
-<!--  New SlideShow -->
-<div class="container">
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="Images/Ori&theBlindForestCover.jpg" style="width:100%">
-      <div class="block-row">
-        
-          <div class="left-text">Ori and the Blind Forest</div>
-                
-          <div class="right-text">$19.99</div>
-        
-      </div>
-      <div class="block"></div>
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="Images/c2077+ult.jpg" style="width:100%">
-      <div class="block-row">
-        
-          <div class="left-text">Cyberpunk 2077</div>
-                
-          <div class="right-text">$59.99</div>
-        
-      </div>
-      <div class="block"></div>
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="Images/FactorioArtwork.jpg" style="width:100%">
-      <div class="block-row">
-        
-          <div class="left-text">Factorio</div>
-        
-          <div class="right-text">$35.99</div>
-        
-      </div> 
-      <div class="block"></div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="Images/Rayman Origins_2.jpg" style="width:100%">
-      <div class="block-row">
-        
-          <div class="left-text">Rayman Origins</div>
-        
-          <div class="right-text" style="width: calc(100% - 24px); right: -510px"><span class="highlight">75% Off!</span> $3.99</div>
-       
-      </div> 
-      <div class="block"></div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="Images/Stardew Valley Cover.jpg" style="width:100%">
-      <div class="block-row">
-        
-          <div class="left-text">Stardew Valley</div>
-        
-          <div class="right-text">$19.99</div>
-        
-      </div> 
-      <div class="block"></div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="Images/Baldur's Gate 3.jpg" style="width:100%">
-      <div class="block-row">
-          <div class="left-text">Baldur’s Gate 3</div>
-        
-          <div class="right-text">$59.99</div>
-        
-      </div> 
-      <div class="block"></div>
-    </div>
-    
-    
-    <a class="prev" onclick="plusSlides(-1)"><i class='fas fa-angle-left'></i></a>
-    <a class="next" onclick="plusSlides(1)"><i class='fas fa-angle-right'></i></a>
-    
+  <div class="container">
+      <img class="about-image" src="images/cyberpunk_2077_ultimate_edition.png">
+      <p>Good Old Games, or GOG for short, is a video game website dedicated to selling 
+          and preserving older titles to be playable on modern hardware. Besides our website, 
+          we are also know for creating the Witcher and Cyberpunk video game series. You can 
+          view our games as well as several other available titles from exceptional AAAs, unique 
+          indies and the best of classic gaming. <a class="active" href="#highlights"><u>Game Store</u></a>
+      </p>
+      <img class="about-image-2" src="images/GOG Galaxy.jpg">
+      <p>GOG Galaxy is our optional client to install and update games from our store. 
+          This includes features like cloud saves, update roll-backs, achievements, and is a 
+          convenient way to manage your cross-platform library while staying in touch with friends. 
+          Download our latest version from the following hyperlink: 
+          <a class="active" href="GOG Galaxy"><u>GOG Galaxy Download</u></a>
+      </p>
   </div>
-    <br>
-    
-   
 
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="Images/Ori&theBlindForestCover.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ori">
+  <br>
+  <div id="highlights"></div>
+      <h1>Highlights</h1>
+
+  <!--  New SlideShow -->
+  <div class="container">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="Images/Ori&theBlindForestCover.jpg" style="width:100%">
+        <div class="block-row">
+          
+            <div class="left-text">Ori and the Blind Forest</div>
+                  
+            <div class="right-text">$19.99</div>
+          
+        </div>
+        <div class="block"></div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="Images/c2077+ult.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cyberpunk">
+      
+      <div class="mySlides fade">
+        <img src="Images/c2077+ult.jpg" style="width:100%">
+        <div class="block-row">
+          
+            <div class="left-text">Cyberpunk 2077</div>
+                  
+            <div class="right-text">$59.99</div>
+          
+        </div>
+        <div class="block"></div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="Images/FactorioArtwork.jpg" style="width:100%" onclick="currentSlide(3)" alt="Factorio">
+      
+      <div class="mySlides fade">
+        <img src="Images/FactorioArtwork.jpg" style="width:100%">
+        <div class="block-row">
+          
+            <div class="left-text">Factorio</div>
+          
+            <div class="right-text">$35.99</div>
+          
+        </div> 
+        <div class="block"></div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="Images/Rayman Origins_2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rayman">
+
+      <div class="mySlides fade">
+        <img src="Images/Rayman Origins_2.jpg" style="width:100%">
+        <div class="block-row">
+          
+            <div class="left-text">Rayman Origins</div>
+          
+            <div class="right-text" style="width: calc(100% - 24px); right: -510px"><span class="highlight">75% Off!</span> $3.99</div>
+        
+        </div> 
+        <div class="block"></div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="Images/Stardew Valley Cover.jpg" style="width:100%" onclick="currentSlide(5)" alt="Stardew">
+
+      <div class="mySlides fade">
+        <img src="Images/Stardew Valley Cover.jpg" style="width:100%">
+        <div class="block-row">
+          
+            <div class="left-text">Stardew Valley</div>
+          
+            <div class="right-text">$19.99</div>
+          
+        </div> 
+        <div class="block"></div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="Images/Baldur's Gate 3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Baldur's Gate">
+
+      <div class="mySlides fade">
+        <img src="Images/Baldur's Gate 3.jpg" style="width:100%">
+        <div class="block-row">
+            <div class="left-text">Baldur’s Gate 3</div>
+          
+            <div class="right-text">$59.99</div>
+          
+        </div> 
+        <div class="block"></div>
       </div>
+      
+      
+      <a class="prev" onclick="plusSlides(-1)"><i class='fas fa-angle-left'></i></a>
+      <a class="next" onclick="plusSlides(1)"><i class='fas fa-angle-right'></i></a>
+      
     </div>
-    
-    <script>
-    let slideIndex = 1;
-    let timeoutId; // Variable to store the timeout ID
-    
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      clearTimeout(timeoutId); // Clear previous timeout
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      clearTimeout(timeoutId); // Clear previous timeout
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slides[slideIndex - 1].style.display = "block";
-      timeoutId = setTimeout(function () {
-        showSlides(slideIndex += 1);
-      }, 5000); // Change slide every 5 seconds
-    }
-    </script>
-
-    <div class="scroll-container">
-            <h2>Why GOG?</h2>
-            
-            <p>We make games last forever!</p>
-            
-            <p>What makes our products unique from 
-            those on other digital game stores is that 
-            they are all DRM free. When you buy through 
-            our store, you have the option to launch 
-            your games through our GOG Galaxy app or 
-            from the game executable from your desktop.</p>
-
-            <p>Scroll through our latest and most featured 
-            titles. Whether you are looking for something 
-            new or rediscovering an old favorite, we have you covered.</p>
-
-            <p>Last year has seen a number of award winning titles 
-            such as Larian Studios’ Baldur’s Gate 3. We have received 
-            a number of new and classic titles never before released.</p>
-    </div>
-
-
-
-    
-    <br>
-  <div id="games"></div>
-    <h1>Games</h1>
- 
-    <table>
-      <tr>
-        <th>Cover</th>
-        <th>Name</th>
-        <th>Genre</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td><img class="src"></td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-        <td>Germany</td>
-      </tr>
-      <tr>
-        <td>Cyberpunk 2077</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-        <td>Mexico</td>
-      </tr>
-      <tr>
-        <td>Ernst Handel</td>
-        <td>Roland Mendel</td>
-        <td>Austria</td>
-        <td>Mexico</td>
-      </tr>
-      <tr>
-        <td>Island Trading</td>
-        <td>Helen Bennett</td>
-        <td>UK</td>
-        <td>Mexico</td>
-      </tr>
-      <tr>
-        <td>Laughing Bacchus Winecellars</td>
-        <td>Yoshi Tannamuri</td>
-        <td>Canada</td>
-        <td>Mexico</td>
-      </tr>
-    </table>
-  
-
-    <br>
-
-  <div id="news"></div>
-      <h1>News</h1>
-      <container>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lmc-d9HRYpc?si=YVhdg7aNX3lsUmlm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </container>
       <br>
-  <div id="goodies"></div>
-      <h1>Goodies</h1> 
+      
+    
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="Images/Ori&theBlindForestCover.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ori">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Images/c2077+ult.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cyberpunk">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Images/FactorioArtwork.jpg" style="width:100%" onclick="currentSlide(3)" alt="Factorio">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Images/Rayman Origins_2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rayman">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Images/Stardew Valley Cover.jpg" style="width:100%" onclick="currentSlide(5)" alt="Stardew">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Images/Baldur's Gate 3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Baldur's Gate">
+        </div>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      let timeoutId; // Variable to store the timeout ID
+      
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        clearTimeout(timeoutId); // Clear previous timeout
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        clearTimeout(timeoutId); // Clear previous timeout
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slides[slideIndex - 1].style.display = "block";
+        timeoutId = setTimeout(function () {
+          showSlides(slideIndex += 1);
+        }, 5000); // Change slide every 5 seconds
+      }
+
+
+      </script>
+
+      <div class="scroll-container">
+              <h2>Why GOG?</h2>
+              
+              <p>We make games last forever!</p>
+              
+              <p>What makes our products unique from 
+              those on other digital game stores is that 
+              they are all DRM free. When you buy through 
+              our store, you have the option to launch 
+              your games through our GOG Galaxy app or 
+              from the game executable from your desktop.</p>
+
+              <p>Scroll through our latest and most featured 
+              titles. Whether you are looking for something 
+              new or rediscovering an old favorite, we have you covered.</p>
+
+              <p>Last year has seen a number of award winning titles 
+              such as Larian Studios’ Baldur’s Gate 3. We have received 
+              a number of new and classic titles never before released.</p>
+      </div>
+
 
 
       
-  </body>
-</div>
+      <br>
+    <div id="games"></div>
+      <h1>Games</h1>
+      <table>
+        <tr>
+          <th>Cover</th>
+          <th>Name</th>
+          <th>Genre</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td class="td-img-container">
+            <img class="td-img" src="Images/c2077+ult.jpg" style="width:70%" alt="Cyberpunk">
+          </td>
+          <td>Cyberpunk 2077 Ultimate Edition</td>
+          <td>Role-Playing</td>
+          <td>$59.99</td>
+        </tr>
+        <tr>
+          <td class="td-img-container">
+            <img class="td-img" src="Images/Stardew Valley Cover.jpg" style="width:70%" alt="Stardew">
+          </td>
+          <td>Stardew Valley</td>
+          <td>Role-Playing</td>
+          <td>$15.99</td>
+        </tr>
+        <tr>
+          <td class="td-img-container">
+            <img class="td-img" src="Images/HollowKnight Cover_Cropped.jpg" style="width:70%" alt="HollowKnight">
+          </td>
+          <td>Hollow Knight</td>
+          <td>Metroidvania</td>
+          <td>$15.99</td>
+        </tr>
+        <tr>
+          <td class="td-img-container">
+            <img class="td-img" src="Images/FactorioArtwork.jpg" style="width:70%" alt="Factorio">
+          </td>
+          <td>Factorio</td>
+          <td>Automation</td>
+          <td>$35.99</td>
+        </tr>
+      </table>
+    
 
-<footer>
-  <div class="container">
+      <br>
 
-  </div>
+    <div id="news"></div>
+        <h1>News</h1>
+
+          
+
+          <div class="flex-container">
+            <div class="flex-item-left">
+              <iframe width="300" height="auto" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+              gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+              
+            </div>
+            
+            <div class="flex-item-right">
+              <iframe width="300" height="auto" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            </div>
+              
+            <div class="flex-item-right">
+
+              <iframe width="300" height="auto" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            
+            </div>
+              
+          </div>
         
-</footer>
-  
+        <br>
+    <div id="goodies"></div>
+        <h1>Goodies</h1>
+          <div class="secondary-text">
+            <p>Wallpapers, artworks and other downloadable items!</p>
+          </div>
+
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <div class="w3-col s4">
+              <img src="Images/FactorioArtwork_2.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="Images/TransistorBackground.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal02').style.display='block'" class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal03').style.display='block'" class="w3-hover-shadow">
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <div class="w3-col s4">
+              <img src="Images/It’s_a_deal-1600x900-EN.png" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal04').style.display='block'" class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="Images/KOTOR_Wallpaper.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal05').style.display='block'" class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="Images/Ori&theBlindForestDesktopBackground_2.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal06').style.display='block'" class="w3-hover-shadow">
+            </div>
+          </div>
+  </div>
+
+</body>
+
+
+  <footer class="footer-main-footer">
+    <div class="container">
+      <div class="footer-top footer">
+        <ul class="footer--top footer-mainlinks">
+          <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/redeem">
+            Redeem code</a>
+          </li>
+          <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="//support.gog.com/hc?product=gog">
+            Contact us</a>
+          </li>
+          <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/work">
+            Career opportunities</a>
+          </li>
+          <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/indie">
+            Submit your game</a>
+          </li>
+          <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/blog">
+            Blog</a>
+          </li>
+        </ul>
+        <div class="footer-microservice-socials">
+          <div class="button">Download Gog Galaxy</div>
+        </div>
+        <div class="footer-middle-socials">
+          <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-facebook" src="images/Facebook Vector (1).png"></a>
+          <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-twitch" src="images/Twitch Vector (2).png"></a>
+          <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-instagram" src="images/Instagram Group (1).png"></a>
+        </div>
+      </div>
+      
+      <div class="footer-microservice__middle">
+
+      </div>
+
+      <div class="footer-bottom">
+        <ul class="footer-microservice-secondary__list"><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/categories/201526109?product=gog">
+          Legal
+          </a></li><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/articles/212632109-Privacy-Policy?product=gog">
+              Privacy policy
+          </a></li><li><a class="footer-microservice-secondary__link" href="/thanks">
+              Our thanks
+          </a></li><li><button class="footer-microservice-secondary__link" ng-click="links.toggleCookieDeclarationVisibility(true)">
+              Cookie Declaration
+          </button></li><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/articles/360019551598?product=gog">
+              Imprint
+          </a></li></ul>
+      </div>
+    </div>   
+  </footer>
+
 
 </html>
