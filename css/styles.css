@@ -104,24 +104,36 @@ h2 {
 }
 
 .about-image {
-  height: 160px;
+  height: 220px;
   width: auto;
   float: left;
-  padding: 0px 0px;
+  padding:10px 10px;
   margin: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   flex-wrap: wrap;
 }
 
 .about-image-2 {
-  height: 160px;
+  height: 220px;
   width: auto;
   float: right;
   border: 0px;
-  padding: 0px 0px;
+  padding: 10px 10px;
   margin: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 601px) {
+  .about-image, .about-image-2 {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-image, .about-image-2 {
+    height: 140px;
+  }
 }
 
 * {
@@ -160,7 +172,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 950px;
   position: relative;
   margin: auto;
   display: block;
@@ -220,8 +232,53 @@ img {
 
 /* Caption text */
 .left-text {
+  position: absolute;
+  left: 40px;
+  top: 50px;
+  color: white;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: bold;
+  
+  
+}
+
+.right-text {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  color: white;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .previous,
+  .next {
+    display:none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.left-text, div.right-text {
+    font-size: 30px;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.left-text, div.right-text  {
+    font-size: 14px;
+    top: 25px;
+  }
+}
+
+
+/*
+.left-text {
   color: #f2f2f2;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   padding: 50px 92px;
   position: absolute;
@@ -233,7 +290,7 @@ img {
 
 .right-text {
   color: #f2f2f2;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   padding: 50px 12px;
   position: absolute;
@@ -243,7 +300,16 @@ img {
   z-index: 1;
 }
 
-.block {
+.right-text-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+}
+
+.block-row {
+  max-width: 1000px;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
   padding: 72px 12px;
   position: absolute;
@@ -253,9 +319,50 @@ img {
   z-index: 0;
 }
 
-.block-row {
-  max-width: 1000px;
+@media screen and (min-width: 601px) {
+  div.left-text, .right-text {
+    font-size: 30px;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  div.left-text {
+    font-size: 14px;
+    padding: 25px 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.right-text {
+    font-size: 14px;
+    padding: 25px 12px;
+    right: -350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.right-text-discount {
+    font-size: 14px;
+    padding: 50px 112px;
+    right: -170px;
+  }
+}
+*/
+
+.block-container {
+  max-width: 950px;
+  max-height: 50px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
+  padding: 72px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  opacity: 100%;
+  z-index: 0;
+  display: block;
+  margin: auto;
+}
+
 
 /* Fading animation */
 .fade {
@@ -269,8 +376,18 @@ img {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+
+@media screen and (min-width: 601px) {
+  div.block-container {
+    padding: 72px 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.block-container {
+    padding: 32px 12px;
+  }
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -289,18 +406,6 @@ img {
   float: left;
   width: 16.66%;
   padding: 20px;
-}
-
-.left-column {
-  float: left;
-  width: 16.66%;
-  
-}
-
-.right-column {
-  float: right;
-  width: 16.66%;
-  
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -335,19 +440,72 @@ table {
 
 th {
   background-color: #240071;
-  text-align: center;
-  padding: 16px;
+  padding: 6px;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 40px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+.td-img {
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  object-fit: fill;
 }
 
 .td-img-container {
   padding: 1px;
+  text-align: left;
+  
 }
 
-td {
-  text-align: center;
-  padding: 16px;
+.td-text {
+  text-align: left;
+  padding: 10px;
+}
+
+@media screen and (min-width: 601px) {
+  table {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  th {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  th {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.td-img-container  {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.td-img-container {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 tr:nth-child(odd) {
@@ -358,10 +516,9 @@ tr:nth-child(even) {
   background-color: #565454;
 }
 
-.td-img {
-  height: 100%;
+.video-column {
   width: 100%;
-  background-size: cover;
+  padding: 20px;
 }
 
 footer {
@@ -388,17 +545,18 @@ footer {
  .button {
   border: none;
   color: white;
-  background-color: #240071;
-  padding: 25px 22px;
+  background-color: #84009A;
+  background-image: linear-gradient(to right, #84009A, #4500D7);
+  padding: 8px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   width: 170px;
   cursor: pointer;
   font-family: "Montserrat";
   font-weight: bold;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 15px 15px 15px 15px;
   
 }
 

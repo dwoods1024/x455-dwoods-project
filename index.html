@@ -22,7 +22,7 @@
         </div>
     </a>
         <div class="nav-group">
-            <a href="#welcome">Welcome</a>
+            <a href="#top">Welcome</a>
             <a href="#about">About</a>
             <a href="#highlights">Highlights</a>
             <a href="#games">Games</a>
@@ -58,6 +58,7 @@
   
     <div id="about"></div>
     
+    
     <br>
 
     <h1>About Us</h1>
@@ -81,6 +82,7 @@
 
   <br>
   <div id="highlights"></div>
+        <br>
       <h1>Highlights</h1>
 
   <!--  New SlideShow -->
@@ -89,73 +91,67 @@
 
       <div class="mySlides fade">
         <img src="Images/Ori&theBlindForestCover.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
           
             <div class="left-text">Ori and the Blind Forest</div>
                   
             <div class="right-text">$19.99</div>
           
         </div>
-        <div class="block"></div>
       </div>
       
       <div class="mySlides fade">
         <img src="Images/c2077+ult.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
           
             <div class="left-text">Cyberpunk 2077</div>
                   
             <div class="right-text">$59.99</div>
           
         </div>
-        <div class="block"></div>
       </div>
       
       <div class="mySlides fade">
         <img src="Images/FactorioArtwork.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
           
             <div class="left-text">Factorio</div>
           
             <div class="right-text">$35.99</div>
           
         </div> 
-        <div class="block"></div>
       </div>
 
       <div class="mySlides fade">
         <img src="Images/Rayman Origins_2.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
           
             <div class="left-text">Rayman Origins</div>
           
-            <div class="right-text" style="width: calc(100% - 24px); right: -510px"><span class="highlight">75% Off!</span> $3.99</div>
+            <div class="right-text"><span class="highlight">75% Off!</span> $3.99</div>
         
         </div> 
-        <div class="block"></div>
       </div>
 
       <div class="mySlides fade">
         <img src="Images/Stardew Valley Cover.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
           
             <div class="left-text">Stardew Valley</div>
           
             <div class="right-text">$19.99</div>
           
         </div> 
-        <div class="block"></div>
       </div>
 
       <div class="mySlides fade">
         <img src="Images/Baldur's Gate 3.jpg" style="width:100%">
-        <div class="block-row">
+        <div class="block-container">
             <div class="left-text">Baldur’s Gate 3</div>
           
             <div class="right-text">$59.99</div>
           
         </div> 
-        <div class="block"></div>
       </div>
       
       
@@ -217,8 +213,6 @@
           showSlides(slideIndex += 1);
         }, 5000); // Change slide every 5 seconds
       }
-
-
       </script>
 
       <div class="scroll-container">
@@ -241,16 +235,14 @@
               such as Larian Studios’ Baldur’s Gate 3. We have received 
               a number of new and classic titles never before released.</p>
       </div>
-
-
-
       
       <br>
     <div id="games"></div>
+       <br>
       <h1>Games</h1>
       <table>
         <tr>
-          <th>Cover</th>
+          <th style="width:20%">Cover</th>
           <th>Name</th>
           <th>Genre</th>
           <th>Price</th>
@@ -259,33 +251,33 @@
           <td class="td-img-container">
             <img class="td-img" src="Images/c2077+ult.jpg" style="width:70%" alt="Cyberpunk">
           </td>
-          <td>Cyberpunk 2077 Ultimate Edition</td>
-          <td>Role-Playing</td>
-          <td>$59.99</td>
+          <td class="td-text">Cyberpunk 2077 Ultimate Edition</td>
+          <td class="td-text">Role-Playing</td>
+          <td class="td-text">$59.99</td>
         </tr>
         <tr>
           <td class="td-img-container">
             <img class="td-img" src="Images/Stardew Valley Cover.jpg" style="width:70%" alt="Stardew">
           </td>
-          <td>Stardew Valley</td>
-          <td>Role-Playing</td>
-          <td>$15.99</td>
+          <td class="td-text">Stardew Valley</td>
+          <td class="td-text">Role-Playing</td>
+          <td class="td-text">$15.99</td>
         </tr>
         <tr>
           <td class="td-img-container">
             <img class="td-img" src="Images/HollowKnight Cover_Cropped.jpg" style="width:70%" alt="HollowKnight">
           </td>
-          <td>Hollow Knight</td>
-          <td>Metroidvania</td>
-          <td>$15.99</td>
+          <td class="td-text">Hollow Knight</td>
+          <td class="td-text">Metroidvania</td>
+          <td class="td-text">$15.99</td>
         </tr>
         <tr>
           <td class="td-img-container">
             <img class="td-img" src="Images/FactorioArtwork.jpg" style="width:70%" alt="Factorio">
           </td>
-          <td>Factorio</td>
-          <td>Automation</td>
-          <td>$35.99</td>
+          <td class="td-text">Factorio</td>
+          <td class="td-text">Automation</td>
+          <td class="td-text">$35.99</td>
         </tr>
       </table>
     
@@ -293,37 +285,33 @@
       <br>
 
     <div id="news"></div>
+          <br>
         <h1>News</h1>
 
-          
-
-          <div class="flex-container">
-            <div class="flex-item-left">
-              <iframe width="300" height="auto" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" 
+        <div class="row">
+          <div class="video-column">
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" 
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
               gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
-              
-            </div>
-            
-            <div class="flex-item-right">
-              <iframe width="300" height="auto" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" 
+          </div>
+          <div class="video-column">
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" 
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
               picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            </div>
-              
-            <div class="flex-item-right">
-
-              <iframe width="300" height="auto" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            
-            </div>
-              
           </div>
-        
+          <div class="video-column">
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+       
         <br>
     <div id="goodies"></div>
+          <br>
         <h1>Goodies</h1>
           <div class="secondary-text">
             <p>Wallpapers, artworks and other downloadable items!</p>
@@ -377,7 +365,7 @@
           </li>
         </ul>
         <div class="footer-microservice-socials">
-          <div class="button">Download Gog Galaxy</div>
+          <div class="button">Download GOG Galaxy</div>
         </div>
         <div class="footer-middle-socials">
           <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-facebook" src="images/Facebook Vector (1).png"></a>
