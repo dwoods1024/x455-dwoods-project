@@ -117,7 +117,6 @@ h2 {
   height: 220px;
   width: auto;
   float: right;
-  border: 0px;
   padding: 10px 10px;
   margin: 15px;
   margin-bottom: 0;
@@ -239,8 +238,6 @@ img {
   z-index: 1;
   font-size: 30px;
   font-weight: bold;
-  
-  
 }
 
 .right-text {
@@ -443,7 +440,7 @@ th {
   padding: 6px;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 40px;
+  padding-left: 0px;
   text-align: left;
 }
 
@@ -465,6 +462,11 @@ td {
   
 }
 
+.table-row:hover {
+  background-color: #E963FF;
+  color: white;
+}
+
 .td-text {
   text-align: left;
   padding: 10px;
@@ -484,13 +486,13 @@ td {
 
 @media screen and (min-width: 601px) {
   th {
-    padding-left: 40px;
+    padding-left: 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
   th {
-    padding-left: 15px;
+    padding-left: 10px;
   }
 }
 
@@ -516,9 +518,41 @@ tr:nth-child(even) {
   background-color: #565454;
 }
 
+.row {
+  display: flex;
+}
+
 .video-column {
   width: 100%;
   padding: 20px;
+}
+
+.accordion {
+  background-color:#240071;
+  color: #EEEEEE;
+  cursor: pointer;
+  padding: 16px;
+  width: 400px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color:#E963FF; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: black;
+  overflow: hidden;
+}
+
+.fa-angle-down {
+  padding: 10px;
 }
 
 footer {

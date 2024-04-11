@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    
+
     <!--Montserrat Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <!--  Navbar -->
-</head>
-<body>
   <div class="topnav">
     <a class="active" href="#top">
         <div class="imgBx">
@@ -49,6 +50,9 @@
             </div>
         </div>        
   </div>
+
+</head>
+<body>
   <div class="video-container">
     <div id="welcome"></div>
     <video class="my-video" controls autoplay muted loop>
@@ -183,38 +187,7 @@
           <img class="demo cursor" src="Images/Baldur's Gate 3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Baldur's Gate">
         </div>
       </div>
-      
-      <script>
-      let slideIndex = 1;
-      let timeoutId; // Variable to store the timeout ID
-      
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        clearTimeout(timeoutId); // Clear previous timeout
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        clearTimeout(timeoutId); // Clear previous timeout
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        slides[slideIndex - 1].style.display = "block";
-        timeoutId = setTimeout(function () {
-          showSlides(slideIndex += 1);
-        }, 5000); // Change slide every 5 seconds
-      }
-      </script>
-
+    
       <div class="scroll-container">
               <h2>Why GOG?</h2>
               
@@ -240,14 +213,14 @@
     <div id="games"></div>
        <br>
       <h1>Games</h1>
-      <table>
+      <table class="myTable">
         <tr>
           <th style="width:20%">Cover</th>
           <th>Name</th>
           <th>Genre</th>
           <th>Price</th>
         </tr>
-        <tr>
+        <tr class="table-row">
           <td class="td-img-container">
             <img class="td-img" src="Images/c2077+ult.jpg" style="width:70%" alt="Cyberpunk">
           </td>
@@ -255,7 +228,7 @@
           <td class="td-text">Role-Playing</td>
           <td class="td-text">$59.99</td>
         </tr>
-        <tr>
+        <tr class="table-row">
           <td class="td-img-container">
             <img class="td-img" src="Images/Stardew Valley Cover.jpg" style="width:70%" alt="Stardew">
           </td>
@@ -263,7 +236,7 @@
           <td class="td-text">Role-Playing</td>
           <td class="td-text">$15.99</td>
         </tr>
-        <tr>
+        <tr class="table-row">
           <td class="td-img-container">
             <img class="td-img" src="Images/HollowKnight Cover_Cropped.jpg" style="width:70%" alt="HollowKnight">
           </td>
@@ -271,7 +244,7 @@
           <td class="td-text">Metroidvania</td>
           <td class="td-text">$15.99</td>
         </tr>
-        <tr>
+        <tr class="table-row">
           <td class="td-img-container">
             <img class="td-img" src="Images/FactorioArtwork.jpg" style="width:70%" alt="Factorio">
           </td>
@@ -293,21 +266,38 @@
             <iframe width="400" height="300" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" 
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
               gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
+            </iframe>
+              <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+              <div class="panel">
+                <p>Larian Studios wins Game of the Year 2023 with Baldur’s Gate 3! 
+                  Relive the footage of the teams’ triumph here.
+                </p>
+              </div>
           </div>
           <div class="video-column">
             <iframe width="400" height="300" src="https://www.youtube.com/embed/lhSLxvHsYmk?si=abYttmZ3FHbg7-q3" 
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+              <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+              <div class="panel">
+                <p>New Rimworld Expansion Biotech! 
+                  Raise a family with children, experiment with genetic modifications, and command your own mechanoid army and workforce.
+                </p>
+              </div>
           </div>
           <div class="video-column">
             <iframe width="400" height="300" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" 
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+              <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+                <div class="panel">
+                  <p>Spring Sale starts this week! See our top recommended games. Up to 75% off on various titles.
+                  </p>
+                </div>
           </div>
         </div>
-
-
        
         <br>
     <div id="goodies"></div>
@@ -339,7 +329,71 @@
               <img src="Images/Ori&theBlindForestDesktopBackground_2.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal06').style.display='block'" class="w3-hover-shadow">
             </div>
           </div>
-  </div>
+      </div>
+
+  <script>
+    let slideIndex = 1;
+    let timeoutId; // Variable to store the timeout ID
+    
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      clearTimeout(timeoutId); // Clear previous timeout
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      clearTimeout(timeoutId); // Clear previous timeout
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex - 1].style.display = "block";
+      timeoutId = setTimeout(function () {
+        showSlides(slideIndex += 1);
+      }, 5000); // Change slide every 5 seconds
+    }
+
+    // Accordian Code
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === "block") {
+        mySidebar.style.display = "none";
+      } else {
+        mySidebar.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+    }
+    
+    </script>
 
 </body>
 
@@ -393,6 +447,4 @@
       </div>
     </div>   
   </footer>
-
-
 </html>
