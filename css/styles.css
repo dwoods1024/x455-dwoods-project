@@ -519,12 +519,13 @@ tr:nth-child(even) {
 }
 
 .row {
-  display: flex;
+  display: block;
 }
 
 .video-column {
   width: 100%;
   padding: 20px;
+  
 }
 
 .accordion {
@@ -538,6 +539,7 @@ tr:nth-child(even) {
   outline: none;
   font-size: 20px;
   transition: 0.4s;
+  display: block;
 }
 
 .accordion:hover {
@@ -549,6 +551,7 @@ tr:nth-child(even) {
   display: none;
   background-color: black;
   overflow: hidden;
+  width: 400px;
 }
 
 .fa-angle-down {
