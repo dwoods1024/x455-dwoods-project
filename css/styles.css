@@ -61,6 +61,10 @@ h2 {
   height: auto;  
 }
 
+a:focus:not(:link:active) {  
+  outline: -webkit-focus-ring-color auto 5px;  
+}
+
 .topnav {
   overflow: hidden;
   background-color: #240071;
@@ -104,24 +108,35 @@ h2 {
 }
 
 .about-image {
-  height: 160px;
+  height: 220px;
   width: auto;
   float: left;
-  padding: 0px 0px;
+  padding:10px 10px;
   margin: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   flex-wrap: wrap;
 }
 
 .about-image-2 {
-  height: 160px;
+  height: 220px;
   width: auto;
   float: right;
-  border: 0px;
-  padding: 0px 0px;
+  padding: 10px 10px;
   margin: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 601px) {
+  .about-image, .about-image-2 {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-image, .about-image-2 {
+    height: 140px;
+  }
 }
 
 * {
@@ -227,8 +242,6 @@ img {
   z-index: 1;
   font-size: 30px;
   font-weight: bold;
-  
-  
 }
 
 .right-text {
@@ -241,6 +254,12 @@ img {
   font-weight: bold;
 }
 
+@media screen and (max-width: 600px) {
+  .previous,
+  .next {
+    display:none;
+  }
+}
 
 @media screen and (min-width: 601px) {
   div.left-text, div.right-text {
@@ -425,7 +444,7 @@ th {
   padding: 6px;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 40px;
+  padding-left: 0px;
   text-align: left;
 }
 
@@ -447,6 +466,11 @@ td {
   
 }
 
+.table-row:hover {
+  background-color: #E963FF;
+  color: white;
+}
+
 .td-text {
   text-align: left;
   padding: 10px;
@@ -466,13 +490,13 @@ td {
 
 @media screen and (min-width: 601px) {
   th {
-    padding-left: 40px;
+    padding-left: 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
   th {
-    padding-left: 15px;
+    padding-left: 10px;
   }
 }
 
@@ -497,6 +521,47 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: #565454;
 }
+
+.row {
+  display: block;
+}
+
+.video-column {
+  width: 100%;
+  padding: 20px;
+  
+}
+
+.accordion {
+  background-color:#240071;
+  color: #EEEEEE;
+  cursor: pointer;
+  padding: 16px;
+  width: 400px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  display: block;
+}
+
+.accordion:hover {
+  background-color:#E963FF;
+}
+
+.panel {
+  display: none;
+  background-color: black;
+  overflow: hidden;
+  width: 400px;
+  margin: 0;
+}
+
+.fa-angle-down {
+  padding: 10px;
+}
+
 
 footer {
   background-color: #1E1E1E;
@@ -534,8 +599,16 @@ footer {
   font-family: "Montserrat";
   font-weight: bold;
   border-radius: 15px 15px 15px 15px;
-  
+
 }
+
+.button:hover {
+  color: white;
+  background-color: #84009A;
+  background-image: linear-gradient(to right, #c803eb, #5305fc);
+
+}
+
 
 .footer-icon-facebook, .footer-icon-twitch, .footer-icon-instagram {
   width: 40px;
