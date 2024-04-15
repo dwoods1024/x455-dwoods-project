@@ -31,6 +31,7 @@ h1 {
   color: #E963FF;
   text-align: center;
   padding: 47px 0px;
+  font-weight: bold;
 }
 
 h2 {
@@ -41,12 +42,14 @@ h2 {
   padding: 20px 20px;
   margin: 0;
   background-color: #240071;
+  font-weight: bold;
 }
 
 .secondary-text p {
   text-align: center;
   font-size: 20px;
   padding: 0;
+  padding-bottom: 50px;
 }
 
 .box-image-home{
@@ -59,6 +62,10 @@ h2 {
 .box-image-search{
   width: 40px;
   height: auto;  
+}
+
+a:focus:not(:link:active) {  
+  outline: -webkit-focus-ring-color auto 5px;  
 }
 
 .topnav {
@@ -442,6 +449,7 @@ th {
   padding-bottom: 16px;
   padding-left: 0px;
   text-align: left;
+  cursor: pointer;
 }
 
 td {
@@ -532,31 +540,123 @@ tr:nth-child(even) {
   background-color:#240071;
   color: #EEEEEE;
   cursor: pointer;
-  padding: 16px;
-  width: 400px;
+  padding: 10px;
+  flex: 50%;
+  width: 450px;
   border: none;
-  text-align: left;
+  text-align: center;
   outline: none;
   font-size: 20px;
   transition: 0.4s;
-  display: block;
+  
 }
 
 .accordion:hover {
-  background-color:#E963FF; 
+  background-color:#E963FF;
 }
 
 .panel {
-  padding: 0 18px;
   display: none;
   background-color: black;
   overflow: hidden;
-  width: 400px;
+  width: 450px;
+  margin: 0;
 }
 
 .fa-angle-down {
   padding: 10px;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+
+.flex-item-left {
+  width: 100%;
+  padding: 0px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  width: 100%;
+  padding: 0px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+
+/* Responsive layout - for News Videos*/
+@media screen and (min-width: 601px) {
+  iframe  {
+    width: 450px; 
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  iframe {
+    width: 390px; 
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .accordion  {
+    padding: 10px;
+    flex: 50%;
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .accordion {
+    padding: 10px;
+    flex: 50%;
+    width: 390px;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img{
+  width: 100%;
+  margin-top: 10px;
+  height: 200px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/*Lightbox*/
+
+/*Footer*/
+
 
 footer {
   background-color: #1E1E1E;
@@ -594,8 +694,16 @@ footer {
   font-family: "Montserrat";
   font-weight: bold;
   border-radius: 15px 15px 15px 15px;
-  
+
 }
+
+.button:hover {
+  color: white;
+  background-color: #84009A;
+  background-image: linear-gradient(to right, #c803eb, #5305fc);
+
+}
+
 
 .footer-icon-facebook, .footer-icon-twitch, .footer-icon-instagram {
   width: 40px;
