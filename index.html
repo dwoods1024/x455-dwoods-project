@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>x455 GOG Redesign</title>
     <link rel="stylesheet" href="css/styles.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
@@ -12,7 +14,7 @@
     <!--Montserrat Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <!--  Navbar -->
@@ -159,10 +161,11 @@
         </div>
         
         
-        <a class="prev" onclick="plusSlides(-1)"><i class='fas fa-angle-left'></i></a>
-        <a class="next" onclick="plusSlides(1)"><i class='fas fa-angle-right'></i></a>
+        <div class="prev" onclick="plusSlides(-1)"><i class='fas fa-angle-left'></i></div>
         
-  </div>
+        <div class="next" onclick="plusSlides(1)"><i class='fas fa-angle-right'></i></div>
+        
+      </div>
         <br>
         
       
@@ -213,12 +216,12 @@
       <div id="games"></div>
         <br>
         <h1>Games</h1>
-        <table class="myTable">
+        <table id="myTable">
           <tr>
-            <th style="width:20%">Cover</th>
-            <th>Name</th>
-            <th>Genre</th>
-            <th>Price</th>
+            <th onclick="sortTable(0)" style="width:20%">Cover</th>
+            <th onclick="sortTable(1)" style="width:20%">Name</th>
+            <th onclick="sortTable(2)" style="width:20%">Genre</th>
+            <th onclick="sortTable(3)" style="width:20%">Price</th>
           </tr>
           <tr class="table-row">
             <td class="td-img-container">
@@ -252,6 +255,22 @@
             <td class="td-text">Automation</td>
             <td class="td-text">$35.99</td>
           </tr>
+          <tr class="table-row">
+            <td class="td-img-container">
+              <img class="td-img" src="Images/Ori&theBlindForestCover.jpg" style="width:70%" alt="Factorio">
+            </td>
+            <td class="td-text">Ori and the Blind Forest: Definitive Edition</td>
+            <td class="td-text">Metroidvania</td>
+            <td class="td-text">$19.99</td>
+          </tr>
+          <tr class="table-row">
+            <td class="td-img-container">
+              <img class="td-img" src="Images/Baldur's Gate 3.jpg" style="width:70%" alt="Factorio">
+            </td>
+            <td class="td-text">Baldur's Gate 3</td>
+            <td class="td-text">Role-Playing</td>
+            <td class="td-text">$59.99</td>
+          </tr>
         </table>
       
 
@@ -260,143 +279,89 @@
       <div id="news"></div>
             <br>
           <h1>News</h1>
-        <div class="container"> 
-          <div class="row">
-            <div class="video-column">
-              <iframe width="400" height="300" src="https://www.youtube.com/embed/J6hpMSTDkoM?si=mPjyzmsNE6u5bk9r" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
+        <div class="flex-container"> 
+          
+            <div class="flex-item-left">
+              <iframe width="450" height="300" src="https://www.youtube.com/embed/h0NouO1_ndw?si=HIAhNtVwnySj2bYh" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
                 <div class="panel">
-                  <p>Larian Studios wins Game of the Year 2023 with Baldur’s Gate 3! 
+                  <p>Larian Studios wins Best Game at the 2024 BAFTA Awards with Baldur’s Gate 3! 
                     Relive the footage of the teams’ triumph here.
                   </p>
                 </div>
             </div>
-            <div class="video-column">
-              <iframe width="400" height="300" src="https://www.youtube.com/embed/59ooT57Lo3g?si=h5ZiGuBDvO59CwuN" 
+            <div class="flex-item-right">
+              <iframe width="450" height="300" src="https://www.youtube.com/embed/59ooT57Lo3g?si=h5ZiGuBDvO59CwuN" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
+             
                 <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+              
                 <div class="panel">
-                  <p>New Rimworld Expansion coming soon on GOG! 
+                  <p>New Rimworld Expansion available on GOG! 
                     RimWorld - Anomaly, a horror-themed expansion where
                     Darkness stirs on the rim. 
-                    Wishlist it now!
+                    Purchase today!
                   </p>
                 </div>
-            </div>
-            <div class="video-column">
-              <iframe width="400" height="300" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-                picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-                <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
-                  <div class="panel">
-                    <p>Spring Sale starts this week! See our top recommended games. Up to 75% off on various titles.
-                    </p>
-                  </div>
-            </div>
-          </div>
+            </div>          
         </div>
+        <div class="flex-container">
+          <div class="flex-item-left">
+            <iframe width="450" height="300" src="https://www.youtube.com/embed/tjqZE4NRD64?si=iM4nO5nYxuVYJ42T" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            
+              <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+            
+                <div class="panel">
+                  <p>Spring Sale starts this week! See our top recommended games. Up to 75% off on various titles.
+                  </p>
+                </div>
+          </div>
+          <div class="flex-item-right">
+            <iframe width="450" height="300" src="https://www.youtube.com/embed/6o6D_a3PAHw?si=8iHzSkKkGJLzEfHb" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+              <button class="accordion">Description<i class='fas fa-angle-down'></i></button>
+            
+              <div class="panel">
+                <p>The new release date for S.T.A.L.K.E.R. 2: Heart of Chornobyl was announced. 
+                  The game will be released on September 5, 2024 and is available for pre-order now!
+                </p>
+              </div>
+          </div> 
+        </div>
+   
         
           <br>
       <div id="goodies"></div>
             <br>
           <h1>Goodies</h1>
+          
             <div class="secondary-text">
               <p>Wallpapers, artworks and other downloadable items!</p>
             </div>
-
-            <div class="w3-row-padding" style="margin: 15px 0px">
-              <div class="w3-col s4">
-                <img src="Images/FactorioArtwork_2.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-shadow">
-              </div>
-              <div class="w3-col s4">
-                <img src="Images/TransistorBackground.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal02').style.display='block'" class="w3-hover-shadow">
-              </div>
-              <div class="w3-col s4">
-                <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal03').style.display='block'" class="w3-hover-shadow">
-              </div>
-            </div>
-            <div class="w3-row-padding" style="margin: 15px 0px">
-              <div class="w3-col s4">
-                <img src="Images/It’s_a_deal-1600x900-EN.png" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal04').style.display='block'" class="w3-hover-shadow">
-              </div>
-              <div class="w3-col s4">
-                <img src="Images/KOTOR_Wallpaper.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal05').style.display='block'" class="w3-hover-shadow">
-              </div>
-              <div class="w3-col s4">
-                <img src="Images/Ori&theBlindForestDesktopBackground_2.jpg" style="width: 100%; cursor: zoom-in" onclick="document.getElementById('modal06').style.display='block'" class="w3-hover-shadow">
+           
+            <div class="gallery-container">
+              <div class="gallery">
+                <img src="Images/FactorioArtwork_2.jpg" onclick="openModal();currentSlide(1)">
+                <img src="Images/TransistorBackground.jpg" onclick="openModal();currentSlide(2)">
+                <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" onclick="openModal();currentSlide(3)">
+                <img src="Images/KOTOR_Wallpaper.jpg" onclick="openModal();currentSlide(4)">
+                <img src="Images/It’s_a_deal-1600x900-EN.png" onclick="openModal();currentSlide(5)">
+                <img src="Images/Ori&theBlindForestDesktopBackground_2.jpg" onclick="openModal();currentSlide(6)">
               </div>
             </div>
-          </div>
-      
-    <script>
-      let slideIndex = 1;
-      let timeoutId; // Variable to store the timeout ID
-      
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        clearTimeout(timeoutId); // Clear previous timeout
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        clearTimeout(timeoutId); // Clear previous timeout
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        slides[slideIndex - 1].style.display = "block";
-        timeoutId = setTimeout(function () {
-          showSlides(slideIndex += 1);
-        }, 5000); // Change slide every 5 seconds
-      }
 
-      // Accordian Code
-      var acc = document.getElementsByClassName("accordion");
-      var i;
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-
-          // Toggle between showing and hiding the sidebar when clicking the menu icon
-      var mySidebar = document.getElementById("mySidebar");
-
-      function w3_open() {
-        if (mySidebar.style.display === "block") {
-          mySidebar.style.display = "none";
-        } else {
-          mySidebar.style.display = "block";
-        }
-      }
-
-      // Close the sidebar with the close button
-      function w3_close() {
-        mySidebar.style.display = "none";
-      }
-      
-      </script>
+    </div>
+    <script src="js/script.js"></script>             
 
     </body>
 
@@ -422,7 +387,11 @@
             </li>
           </ul>
           <div class="footer-microservice-socials">
-            <div class="button">Download GOG Galaxy</div>
+            <a class="active" href="#">
+            <div class="button">
+              Download GOG Galaxy
+            </div>
+            </a>
           </div>
           <div class="footer-middle-socials">
             <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-facebook" src="images/Facebook Vector (1).png"></a>
