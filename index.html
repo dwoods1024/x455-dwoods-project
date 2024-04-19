@@ -55,7 +55,7 @@
 <body>
   <div class="video-container">
     <div id="welcome"></div>
-    <video class="my-video" controls autoplay muted loop>
+    <video class="my-video" autoplay muted loop>
         <source src="images/GOG Website Intro Vid.mp4" type="video/mp4">
     </video>
   </div>
@@ -93,7 +93,7 @@
   <div class="container">
       <div class="slideshow-container">
 
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/Ori&theBlindForestCover.jpg" style="width:100%">
           <div class="block-container">
             
@@ -104,7 +104,7 @@
           </div>
         </div>
         
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/c2077+ult.jpg" style="width:100%">
           <div class="block-container">
             
@@ -115,7 +115,7 @@
           </div>
         </div>
         
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/FactorioArtwork.jpg" style="width:100%">
           <div class="block-container">
             
@@ -126,7 +126,7 @@
           </div> 
         </div>
 
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/Rayman Origins_2.jpg" style="width:100%">
           <div class="block-container">
             
@@ -137,7 +137,7 @@
           </div> 
         </div>
 
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/Stardew Valley Cover.jpg" style="width:100%">
           <div class="block-container">
             
@@ -148,7 +148,7 @@
           </div> 
         </div>
 
-        <div class="mySlides fade">
+        <div class="highlightSlides fade">
           <img src="Images/Baldur's Gate 3.jpg" style="width:100%">
           <div class="block-container">
               <div class="left-text">Baldur’s Gate 3</div>
@@ -343,17 +343,133 @@
             <div class="secondary-text">
               <p>Wallpapers, artworks and other downloadable items!</p>
             </div>
-
+            
+            <!--LightBox Code-->
             <div class="gallery-container">
               <div class="gallery">
-                <img src="Images/FactorioArtwork_2.jpg" onclick="openModal();currentSlide(1)">
-                <img src="Images/TransistorBackground.jpg" onclick="openModal();currentSlide(2)">
-                <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" onclick="openModal();currentSlide(3)">
-                <img src="Images/KOTOR_Wallpaper.jpg" onclick="openModal();currentSlide(4)">
-                <img src="Images/It’s_a_deal-1600x900-EN.png" onclick="openModal();currentSlide(5)">
-                <img src="Images/Ori&theBlindForestDesktopBackground_2.jpg" onclick="openModal();currentSlide(6)">
+                <div class="light-column">
+                  <img src="Images/FactorioArtwork_2.jpg" onclick="openModal();currentSlide2(1)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/TransistorBackground.jpg" onclick="openModal();currentSlide2(2)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" onclick="openModal();currentSlide2(3)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/KOTOR_Wallpaper.jpg" onclick="openModal();currentSlide2(4)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/It’s_a_deal-1600x900-EN.png" onclick="openModal();currentSlide2(5)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/Ori&theBlindForestDesktopBackground.jpg" onclick="openModal();currentSlide2(6)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/Baldurs-Gate-3-PC-Wallpaper-2048x1152.jpg" onclick="openModal();currentSlide2(7)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/Witcher 3 10th Anniversary.jpg" onclick="openModal();currentSlide2(8)">
+                </div>
+                <div class="light-column">
+                  <img src="Images/01_BG_wallpaper_1920x1080px.jpg" onclick="openModal();currentSlide2(9)">
+                </div>                              
+                                                
               </div>
             </div>
+
+
+            <!--LightBox Code-->
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+            
+                <div class="mySlides">
+                  
+                  <img src="Images/FactorioArtwork_2.jpg" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  
+                  <img src="Images/TransistorBackground.jpg" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  
+                  <img src="Images/Witcher-3-Wallpaper-Desktop-Download.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  
+                  <img src="Images/KOTOR_Wallpaper.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  
+                  <img src="Images/It’s_a_deal-1600x900-EN.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  
+                  <img src="Images/Ori&theBlindForestDesktopBackground.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  
+                  <img src="Images/Baldurs-Gate-3-PC-Wallpaper-2048x1152.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  
+                  <img src="Images/Witcher 3 10th Anniversary.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  
+                  <img src="Images/01_BG_wallpaper_1920x1080px.jpg" style="width:100%">
+                </div>
+            
+                
+            
+                <div class="caption-container">
+                  <p id="caption"></p>
+                  <a class="active" href="#">
+                    <img class="icon" src="Images/Download_Vector.png">
+                  </a>
+                </div>
+            
+            
+                <div class="light-column">
+                  <img class="demo2" alt="Factorio Artwork">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Transistor Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Witcher Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Star Wars: Knights of the Old Republic Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Cyperpunk 2077 Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Ori and the Blind Forest Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Baldur's Gate 3 Karlach Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="The Witcher 3 10th Anniversary Desktop Background">
+                </div>
+                <div class="light-column">
+                  <img class="demo2" alt="Baldur's Gate 3 Desktop Background">
+                </div>
+              </div>
+            </div>
+
+
 
   </div>
 
@@ -366,55 +482,85 @@
 
     <footer class="footer-main-footer">
       <div class="container">
-        <div class="footer-top footer">
-          <ul class="footer--top footer-mainlinks">
-            <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/redeem">
-              Redeem code</a>
-            </li>
-            <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="//support.gog.com/hc?product=gog">
-              Contact us</a>
-            </li>
-            <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/work">
-              Career opportunities</a>
-            </li>
-            <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/indie">
-              Submit your game</a>
-            </li>
-            <li class="footer--top footer-mainlinks_item"><a class="footer--top footer-mainlinks_link" href="/blog">
-              Blog</a>
-            </li>
-          </ul>
-          <div class="footer-microservice-socials">
-            <a class="active" href="#">
-            <div class="button">
-              Download GOG Galaxy
-            </div>
-            </a>
-          </div>
-          <div class="footer-middle-socials">
-            <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-facebook" src="images/Facebook Vector (1).png"></a>
-            <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-twitch" src="images/Twitch Vector (2).png"></a>
-            <a target="_blank" class="footer-microservice-socials__item"><img class="footer-icon-instagram" src="images/Instagram Group (1).png"></a>
-          </div>
-        </div>
+              
+        <table id="footerTable">
+          <tr class="left-footer">
+            <td>
+              <ul class="footer-mainlinks">
+                <li class="footer-mainlinks_item">
+                  Redeem code</a>
+                </li>
+                <li class="footer-mainlinks_item">
+                  Contact us</a>
+                </li>
+                <li class="footer-mainlinks_item">
+                  Career opportunities</a>
+                </li>
+                <li class="footer-mainlinks_item">
+                  Submit your game</a>
+                </li>
+                <li class="footer-mainlinks_item">
+                  Blog</a>
+                </li>
+              </ul>
+            </td>
+            
+            
+            <td class="footer-buttons">
+              <a class="active" href="#">
+              <div class="button">
+                Download GOG Galaxy
+              </div>
+              </a>
+            </td>
+          </tr>
+          <tr class="left-footer">
+            <td>
+              <ul class="footer-mainlinks">
+                <li class="footer-mainlinks_item">
+                  Legal
+                </li>
+                <li class="footer-mainlinks_item">
+                  Privacy policy
+                </li>
+                <li class="footer-mainlinks_item">
+                  Our thanks
+                </li>
+                <li class="footer-mainlinks_item">
+                  Cookie Declaration
+                </li>
+                <li class="footer-mainlinks_item">
+                  Imprint
+                </li>
+              </ul>
+            </td>
+            
+            
+            <td class="social">
+              <a target="_blank" class="social"><img class="footer-icon-instagram" src="images/Instagram Group (1).png"></a>
+              <a target="_blank" class="social"><img class="footer-icon-twitch" src="images/Twitch Vector (2).png"></a>              
+              <a target="_blank" class="social"><img class="footer-icon-facebook" src="images/Facebook Vector (1).png"></a>
+            </td>
+          </tr>
+          <tr class="left-footer">
+            <td class="footer-bottom-left">
+              © GOG sp. z o.o. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.
+            </td>
+            
+            
+            <td class="footer-cdpr">Part of 
+              <img class="cdprLogo" src="Images/CD-Project-Thumb-Square.png">
+              CD Projekt Red Group
+            </td>
+          </tr>
+          
+  
+        </table>
+
         
-        <div class="footer-microservice__middle">
-
-        </div>
-
-        <div class="footer-bottom">
-          <ul class="footer-microservice-secondary__list"><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/categories/201526109?product=gog">
-            Legal
-            </a></li><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/articles/212632109-Privacy-Policy?product=gog">
-                Privacy policy
-            </a></li><li><a class="footer-microservice-secondary__link" href="/thanks">
-                Our thanks
-            </a></li><li><button class="footer-microservice-secondary__link" ng-click="links.toggleCookieDeclarationVisibility(true)">
-                Cookie Declaration
-            </button></li><li><a class="footer-microservice-secondary__link" href="https://support.gog.com/hc/articles/360019551598?product=gog">
-                Imprint
-            </a></li></ul>
-        </div>
       </div>   
+      
+      
+      
     </footer>
 </html>

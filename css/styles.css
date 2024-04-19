@@ -169,9 +169,10 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 
-.mySlides {
+.highlightSlides {
   display: none;
   
 }
@@ -450,10 +451,12 @@ th {
   padding-left: 0px;
   text-align: left;
   cursor: pointer;
+  
 }
 
 td {
   padding: 10px;
+  border: 3px solid greenyellow;
 }
 
 .td-img {
@@ -518,11 +521,11 @@ td {
   }
 }
 
-tr:nth-child(odd) {
+tr.table-row:nth-child(odd) {
   background-color: rgba(96, 88, 88, 0.2);
 }
 
-tr:nth-child(even) {
+tr.table-row:nth-child(even) {
   background-color: #565454;
 }
 
@@ -627,11 +630,13 @@ tr:nth-child(even) {
   }
 }
 
+/* 
+
+
+*/
 .gallery-container {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  text-align: center;
+  flex-direction: row;
+  display: block;
   padding-bottom: 50px;
 }
 
@@ -639,14 +644,16 @@ tr:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 30px;
+  
 }
 
-.gallery img{
-  width: 100%;
+.gallery .light-column img{
+  width: 250px;
   margin-top: 10px;
-  height: 200px;
+  height: 100%;
   transition: 1s;
-  cursor: pointer;
+  cursor:zoom-in;
+  text-align: center;
 }
 
 .gallery img:hover {
@@ -655,16 +662,136 @@ tr:nth-child(even) {
 
 /*Lightbox*/
 
+
+.light-column {
+  float: left;
+}
+
+.gallery > .light-column {
+  padding: 0 8px;
+  text-align: center;
+}
+
+.gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin-top:100px;
+}
+
+/* The Close Button*/ 
+.close {
+  color: white;
+  position: fixed;
+  top: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top:100px;
+  right: 200px;
+}
+
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 601px) {
+  .close {
+    right: 200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .close {
+    right: 50px;
+  }
+}
+
+.mySlides {
+  display: none;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext2 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#caption {
+  text-align: center;
+  color:#240071;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  position: relative;
+}
+
+.demo2 {
+  opacity: 0.0;
+}
+
+.icon {
+  width:18px;
+  margin-bottom: 10px;
+}
+
+
 /*Footer*/
 
+#footerTable {
+  color:#E963FF;
+  font-size: 18px;
+  border: 3px solid greenyellow;
+  padding: 0%;
+}
 
 footer {
   background-color: #1E1E1E;
-  color:#E963FF;
-  height: 500px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  max-width: 100%;
+  height: auto;
+  
 }
+
 
 .copyright {
   float:left;
@@ -673,12 +800,6 @@ footer {
   word-spacing: 20px;
  }
  
- .social {
-  float:right;
-  text-align: right;
-  width: 400px;
- }
-
  .button {
   border: none;
   color: white;
@@ -704,12 +825,53 @@ footer {
 
 }
 
-
-.footer-icon-facebook, .footer-icon-twitch, .footer-icon-instagram {
-  width: 40px;
-  height: auto; 
+.social {
+  flex-direction: row;
+  width: 300px;
+  
 }
 
-.footer-middle-socials {
+.footer-icon-facebook, .footer-icon-twitch, .footer-icon-instagram {
+  width: 50px;
+  height: auto;
+  margin: 10px;
+  text-align: center;
   float: right;
+}
+
+.footer-mainlinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.footer-mainlinks_item {
+  float: left;
+  padding: 16px;
+  padding-left: 0%;
+}
+
+.footer-buttons{
+  float:right;
+  
+}
+
+.footer-cdpr{
+  float:right;
+  text-align: right;
+  color:#E963FF;
+  font-size: 18px;
+}
+
+
+
+.cdprLogo {
+  height: 96px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.left-footer{
+  width: 50px;
 }
