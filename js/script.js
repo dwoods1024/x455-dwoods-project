@@ -5,12 +5,12 @@ let timeoutId; // Variable to store the timeout ID
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  clearTimeout(timeoutId); // Clear previous timeout
+  clearTimeout(timeoutId); // Clear previous timeout for plusSlides
   showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  clearTimeout(timeoutId); // Clear previous timeout
+  clearTimeout(timeoutId); // Clear previous timeout for currentSlides
   showSlides(slideIndex = n);
 }
 
@@ -130,28 +130,29 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
+    if (panel.style.display === "inline-block") {
       panel.style.display = "none";
     } else {
-      panel.style.display = "block";
+      panel.style.display = "inline-block";
     }
   });
 }
 
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+//Responsive Hamburger
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-group");
+const overlay = document.querySelector(".overlay");
 
-function w3_open() {
-  if (mySidebar.style.display === "block") {
-    mySidebar.style.display = "none";
-  } else {
-    mySidebar.style.display = "block";
-  }
-}
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
+})
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-}
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  overlay.classList.remove("active");
+}))
