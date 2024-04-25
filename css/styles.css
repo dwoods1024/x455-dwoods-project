@@ -357,7 +357,7 @@ img {
   object-fit: cover; /* Ensures the entire image is visible */
 }
 
-/*
+
 .my-video {
   height: 100%;
   width: 100%;
@@ -366,7 +366,7 @@ img {
   background-repeat: no-repeat;
   pointer-events: none;
 }
-*/
+
 
 .highlightSlides {
   display: none;
