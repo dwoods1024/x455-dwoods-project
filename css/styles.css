@@ -578,10 +578,26 @@ img {
   overflow-y: scroll;
   position: relative;
   display: block;
-  scroll-snap-type: both mandatory;
-  scroll-snap-align: end;
   margin: 30px auto;
   background-color: #282828;
+}
+
+.sticky-header {
+  font-size: 40px;
+  font-family: "Montserrat";
+  color: #EEEEEE;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 0;
+  background-color: #240071;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.content {
+  padding-top: 20px; /* Add padding to prevent content from hiding behind the sticky header */
 }
 
 table {
@@ -597,7 +613,7 @@ th {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 0px;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   
 }
@@ -633,7 +649,7 @@ td {
 }
 
 .td-text {
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
 /*
