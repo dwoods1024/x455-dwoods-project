@@ -283,7 +283,7 @@ a:focus:not(:link:active) {
 
 @media screen and (min-width: 601px) {
   .about-image, .about-image-2 {
-    height: 220px;
+    height: 100px;
   }
 }
 
@@ -1152,6 +1152,7 @@ footer {
   background-color: #1E1E1E;
   width: 100%;
   height: auto;
+  margin-top: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
   
