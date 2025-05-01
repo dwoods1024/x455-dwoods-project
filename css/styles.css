@@ -262,9 +262,9 @@ a:focus:not(:link:active) {
 }
 
 .about-image {
+  float: left;
   height: 220px;
   width: auto;
-  float: left;
   padding:10px 10px;
   margin: 15px;
   margin-bottom: 0;
@@ -272,9 +272,9 @@ a:focus:not(:link:active) {
 }
 
 .about-image-2 {
+  float: right;
   height: 220px;
   width: auto;
-  float: right;
   padding: 10px 10px;
   margin: 15px;
   margin-bottom: 0;
@@ -283,15 +283,15 @@ a:focus:not(:link:active) {
 
 @media screen and (min-width: 601px) {
   .about-image, .about-image-2 {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 300px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .about-image, .about-image-2 {
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 300px;
   }
 }
 
