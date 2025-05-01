@@ -283,13 +283,15 @@ a:focus:not(:link:active) {
 
 @media screen and (min-width: 601px) {
   .about-image, .about-image-2 {
-    height: 100px;
+    height: 150px;
+    width: auto;
   }
 }
 
 @media screen and (max-width: 600px) {
   .about-image, .about-image-2 {
-    height: 140px;
+    height: 150px;
+    width: auto;
   }
 }
 
