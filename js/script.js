@@ -1,3 +1,32 @@
+/* Code for current page Nav highlighting */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").substring(1) === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+});
+
+
+/* Code for current page Nav highlighting (END)*/
+
 // Slideshow Code
 let slideIndex = 1;
 let timeoutId; // Variable to store the timeout ID

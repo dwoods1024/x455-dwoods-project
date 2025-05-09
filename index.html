@@ -24,9 +24,7 @@
       </div>
   </a>
       <div class="nav-group">
-          <div class="nav-item">
-            <a class="nav-link" href="#top">Welcome</a>
-          </div>
+          
           <div class="nav-item">
             <a class="nav-link" href="#highlights">Highlights</a>
           </div>
@@ -60,12 +58,9 @@
               <span class="bar"></span>
             </div>
             
-          </div>
+          </div>  
+
     
-          
-          <!--
-          <span class="hamburger-button" onclick="openNav()">&#9776;</span>
-            -->
 </div>
 
 <div class="overlay"></div>
@@ -75,8 +70,7 @@
 </head>
 <body>
   <div class="video-container">
-    <div id="welcome"></div>
-    
+        
     <img class="my-gif" src="Images/GOG Website Intro Vid (2).gif" alt="My GIF">
     
     
@@ -90,11 +84,15 @@
   
 
   <br>
-  <div id="highlights"></div>
-        <br>
-      <h1>Highlights</h1>
 
   <!--  SlideShow -->
+
+  <section id="highlights">
+  
+        <br>
+        
+      <h1>Highlights</h1>
+
   <div class="container">
       <div class="slideshow-container">
 
@@ -104,7 +102,7 @@
             
               <div class="left-text">Ori and the Blind Forest</div>
                     
-              <div class="right-text">$19.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span> $19.99</div>
             
           </div>
         </div>
@@ -115,7 +113,7 @@
             
               <div class="left-text">Cyberpunk 2077</div>
                     
-              <div class="right-text">$59.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span> $59.99</div>
             
           </div>
         </div>
@@ -126,7 +124,7 @@
             
               <div class="left-text">Factorio</div>
             
-              <div class="right-text">$35.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span> $35.99</div>
             
           </div> 
         </div>
@@ -137,7 +135,7 @@
             
               <div class="left-text">Rayman Origins</div>
             
-              <div class="right-text"><span class="highlight">75% Off!</span> $3.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span><span class="highlight">75% Off!</span> $3.99</div>
           
           </div> 
         </div>
@@ -148,7 +146,7 @@
             
               <div class="left-text">Stardew Valley</div>
             
-              <div class="right-text">$19.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span> $19.99</div>
             
           </div> 
         </div>
@@ -158,7 +156,7 @@
           <div class="block-container">
               <div class="left-text">Baldur’s Gate 3</div>
             
-              <div class="right-text">$59.99</div>
+              <div class="right-text"><span class="actionbutton">Purchase</span> $59.99</div>
             
           </div> 
         </div>
@@ -195,10 +193,12 @@
         
         <br>
 
+      </section>
+      
           <!--  Games -->
-
-        <div id="games"></div>
-        <br>
+      <section id="games">
+        <div class="container">
+        
         <h1>Games</h1>
         <table id="myTable">
           <tr>
@@ -257,14 +257,15 @@
           </tr>
 
         </table>
-      
+      </div>
+      </section>
 
         <br>
 
   <!--  News -->
-
-      <div id="news"></div>
-            <br>
+    <section id="news">
+      <div class="container">
+           
           <h1>News</h1>
           <div class="flex-container">
           
@@ -327,12 +328,14 @@
                     </div>
                 </div> 
               </div>
+    </section>
 
           <br>
 
           <!--Goodies-->
-      <div id="goodies"></div>
-            <br>
+    <section id="goodies">
+      <div class="container">
+            
           <h1>Goodies</h1>
             <div class="secondary-text">
               <p>Wallpapers, artworks and other downloadable items!</p>
@@ -369,8 +372,9 @@
                   <img src="Images/01_BG_wallpaper_1920x1080px.jpg" onclick="openModal();currentSlide2(9)">
                 </div>                              
                                                 
-              </div>
             </div>
+          </div>
+      </div>    
 
 
             <!--LightBox Code-->
@@ -466,14 +470,17 @@
       
           <script src="js/script.js"></script> 
 
-          <div id="about"></div>
+        </section>
+
+          
     
     
           <br>
-      
-          <h1>About Us</h1>
-      
+      <!--About Us Code-->
+      <section id="about">
         <div class="container">
+          
+          <h1>About Us</h1>
             <img class="about-image" src="Images/cyberpunk_2077_ultimate_edition.png">
             <p>Good Old Games, or GOG for short, is a video game website dedicated to selling 
                 and preserving older titles to be playable on modern hardware. Besides our website, 
@@ -512,9 +519,11 @@
                 a number of new and classic titles never before released.</p>
             </div>
         </div>
+      </section>
 
     </body>
 
+    <!--Footer Code-->
     <footer class="footer-main-footer">
       <div class="container">          
         <table id="footerTable">

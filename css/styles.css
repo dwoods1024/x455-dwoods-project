@@ -14,9 +14,16 @@ p {
   margin: 0;
 }
 
-.highlight {
+.actionbutton {
   border: 15px solid #240071; /* Example: red colored border */
   background-color: #240071;
+  margin:20px;
+}
+
+.highlight {
+  border: 15px solid #EC7BFF; /* Example: red colored border */
+  background-color: #EC7BFF;
+  margin:20px;
 }
 
 u {
@@ -30,7 +37,7 @@ h1 {
   font-family: "Montserrat";
   color: #EC7BFF;
   text-align: center;
-  padding: 47px 0px;
+  padding: 150px 0px;
   font-weight: bold;
 }
 
@@ -80,6 +87,10 @@ a:focus:not(:link:active) {
   outline: -webkit-focus-ring-color auto 5px;  
 }
 
+/* Code for current page Nav highlighting */
+
+/* Code for current page Nav highlighting (END)*/
+
 .topnav {
   overflow: hidden;
   background-color: #240071;
@@ -95,9 +106,8 @@ a:focus:not(:link:active) {
 }
 
 .topnav a {
-  float: left;
   color: white;
-  padding: 0px 15px;
+  padding: 0px 25px;
   text-decoration: none;
   font-size: 20px;
   font-family: "Montserrat";
@@ -109,7 +119,7 @@ a:focus:not(:link:active) {
 }
 
 .topnav a.active {
-  color: white;
+  color: #EC7BFF;
 }
 
 @media screen and (max-width: 600px) {
@@ -129,6 +139,7 @@ a:focus:not(:link:active) {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .nav-group a:hover {
@@ -251,10 +262,11 @@ a:focus:not(:link:active) {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8); /* semi-transparent black */
   z-index: 1; /* Ensure it's above other content */
+  pointer-events: none;
 }
 
 .overlay.active {
@@ -596,7 +608,7 @@ img {
   font-weight: bold;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .content {
@@ -1054,7 +1066,7 @@ tr.table-row:nth-child(even) {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: auto;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 100%, rgba(0, 0, 0, 0.60) 100%, rgba(255, 255, 255, 0.65) 100%);
 }
